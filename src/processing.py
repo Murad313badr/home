@@ -38,3 +38,10 @@ def sort_by_date(operations: List[Dict], flow: bool = True) -> Union[List, str]:
         sort_by_date_list = sorted(operations, key=lambda operation: operation["date"], reverse=flow)
         return sort_by_date_list
 
+list_of_operation = filter_by_state(operations, state = "EXECUTED")
+
+print(list_of_operation)
+
+sort_by_date_list = sort_by_date(operations, flow  = True)
+
+print(sort_by_date_list)
